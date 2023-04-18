@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAFTAR HADIR SISWA TJKT</title>
+    <style>
+    * {
+        margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:darkgrey
+}
+
+.container {
+    max-width: 600px;
+    height: 650px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e0d1d1;
+    border-radius: 75px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+form {
+    margin-top: 50px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif
+
+}
+
+.btn-submit {
+    display: block;
+    margin-top: 20px;
+    margin: 0 auto;
+    padding: 12px 70px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0101;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.btn-submit:hover {
+    background-color: #557a19;
+}
+    
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>DAFTAR HADIR SISWA TJKT</h1>
+        <br>
+        <h1>SMKN 4 JAKARTA</h1>
+        <div class="form">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" placeholder="Nama siswa...">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="nis">NIS:</label>
+                <input type="text" id="nis" name="nis" placeholder="NIS siswa...">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="mapel">Mata Pelajaran:</label>
+                <input type="text" id="mapel" name="mapel" placeholder="Mata pelajaran...">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="no-hp">Nomor HP:</label>
+                <input type="text" id="hp" name="hp" placeholder="Nomor HP siswa...">
+            </div>
+            <br>
+            <button onclick="setOutput()"   class="btn-submit">Submit</button>
+    </div>
+
+        </div>
+            
+<h1 id="output"></h1>
+
+
+    <script>
+        function setOutput() {
+          const nama = document.getElementById('nama')
+          const nis = document.getElementById('nis')
+          const mapel = document.getElementById('mapel')
+          const hp = document.getElementById('hp')
+          const output = document.getElementById('output')
+          output.innerHTML = nama.value + ' ' + nis.value + ' ' + mapel.value + ' ' + hp.value
+        }
+      </script>
+    
+    
+</body>
+</html>
